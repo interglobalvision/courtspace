@@ -66,7 +66,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
 function the_excerpt_more_link( $excerpt ){
     $post = get_post();
     //pr($excerpt); die;
-    $excerpt .= '<a class="link-underline font-blue" href="'. get_permalink($post->ID) . '">Continue reading</a>';
+    $excerpt .= '<a class="link-underline font-green" href="'. get_permalink($post->ID) . '">Continue reading</a>';
     return $excerpt;
 }
 add_filter( 'the_excerpt', 'the_excerpt_more_link', 21 );

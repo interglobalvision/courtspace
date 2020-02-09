@@ -16,7 +16,6 @@ if (have_posts()) {
     <div class="container grid-row">
       <div class="grid-item item-s-12 text-align-center line-larger">
         <div class="font-size-large"><span><?php echo $tagline; ?></span></div>
-        <div class="font-size-mid"><span>Orah, Bosnia and Herzegovina</span></div>
       </div>
     </div>
   </section>

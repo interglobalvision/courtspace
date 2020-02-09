@@ -6,7 +6,7 @@ $options = get_site_option('_igv_site_options');
     <div class="container">
       <div id="footer-row" class="grid-row justify-between">
         <div id="footer-logo-holder" class="grid-item item-s-6 item-m-6 item-l-3 margin-bottom-small">
-          <a href="<?php echo home_url(); ?>"><img id="footer-logo" src="<?php bloginfo('stylesheet_directory'); ?>/dist/img/kamen-logo-white.png" /></a>
+          <a href="<?php echo home_url(); ?>"><img id="footer-logo" src="<?php bloginfo('stylesheet_directory'); ?>/dist/img/courtspace-logo.png" /></a>
         </div>
 
         <div id="footer-contact" class="grid-item no-gutter item-s-12 item-m-12 item-l-4 grid-row">

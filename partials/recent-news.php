@@ -36,7 +36,7 @@ if ($recent_query->have_posts()) {
         }
       ?>
         <div class="swiper-slide padding-bottom-small grid-row justify-center align-items-stretch">
-          <a class="font-size-mid font-bold font-blue item-s-12 grid-row justify-center align-items-center border" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><span>More News</span></a>
+          <a class="font-size-mid font-bold font-green item-s-12 grid-row justify-center align-items-center border" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><span>More News</span></a>
         </div>
       </div>
       <div class="swiper-scrollbar"></div>

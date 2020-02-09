@@ -39,7 +39,7 @@ $options = get_site_option('_igv_site_options');
         <div class="grid-row align-items-center justify-between">
 
           <div id="logo-holder" class="grid-item item-s-6 item-l-2 padding-top-tiny padding-bottom-tiny font-size-zero">
-            <a href="<?php echo home_url(); ?>"><img id="header-logo" src="<?php bloginfo('stylesheet_directory'); ?>/dist/img/kamen-logo.png" /></a>
+            <a href="<?php echo home_url(); ?>"><img id="header-logo" src="<?php bloginfo('stylesheet_directory'); ?>/dist/img/courtspace-logo.png" /></a>
           </div>
 
           <nav id="main-nav" class="grid-item no-gutter item-s-12 item-l-auto flex-grow">
@@ -54,12 +54,12 @@ $options = get_site_option('_igv_site_options');
             <?php
               if (!empty($options['socialmedia_instagram'])) {
             ?>
-              <a class="social-link" href="https://instagram.com/<?php echo $options['socialmedia_instagram']; ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/dist/img/icon-ig.png" /></a>
+              <a class="social-link" href="https://instagram.com/<?php echo $options['socialmedia_instagram']; ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/dist/img/icon-ig-white.png" /></a>
             <?php
               }
               if (!empty($options['socialmedia_facebook_url'])) {
             ?>
-              <a class="social-link" href="<?php echo $options['socialmedia_facebook_url']; ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/dist/img/icon-fb.png" /></a>
+              <a class="social-link" href="<?php echo $options['socialmedia_facebook_url']; ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/dist/img/icon-fb-white.png" /></a>
             <?php
               }
             ?>
