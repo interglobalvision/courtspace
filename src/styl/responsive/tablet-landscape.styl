@@ -1,0 +1,106 @@
+@media screen and (min-width: 1024px)
+
+  $gutter = 42px
+
+  $margin-micro = ($gutter / 3)
+  $margin-tiny = ($gutter / 2)
+  $margin-small = ($gutter)
+  $margin-basic = ($gutter * 2)
+  $margin-mid = ($gutter * 3.5)
+  $margin-large = ($gutter * 5)
+
+  $font-size-micro = 10px
+  $font-size-tiny = 12px
+  $font-size-small = 14px
+  $font-size-basic = 16px
+  $font-size-mid = 21px
+  $font-size-large = 27px
+  $font-size-extra = 36px
+
+  grid-maker(96%, $gutter, l)
+
+  space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
+
+  font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid, $font-size-small, $font-size-tiny, $font-size-micro)
+
+  $header-height = 66px
+  $footer-height = 315px
+
+  #header
+    position: relative
+
+  #header-spacer
+    display: none
+
+  #main-content
+    min-height: calc('100vh - ' + ($header-height + $footer-height));
+
+  #main-nav
+    display: block
+    ul
+      width: 100%
+      display: flex
+      flex-direction: row
+      justify-content: center
+    a
+      display: block
+      padding: $margin-tiny
+
+  #main-nav-social
+    display: block
+
+  #mobile-nav-holder,
+  #menu-toggle-holder
+    display: none
+
+  #home-banner
+    height: 65vh
+
+  .swiper-container
+    width: calc('100% - ' + $margin-small)
+
+  .swiper-slide
+    &:not(:first-child)
+      padding-left: $margin-tiny
+    &:not(:last-child)
+      padding-right: $margin-tiny
+
+  #gallery
+    .swiper-slide
+      img
+        max-height: 470px
+      &:not(:first-child)
+        padding-left: $margin-tiny
+      &:not(:last-child)
+        padding-right: $margin-tiny
+
+  .masonry-item
+    padding-left: $margin-tiny
+    padding-right: $margin-tiny
+
+  h1
+    font-size: $font-size-large
+
+  h2
+    font-size: $font-size-mid
+
+  h3, h4
+    font-size: $font-size-basic
+
+  #post-content
+    & > *
+      padding-left: $margin-tiny
+      padding-right: $margin-tiny
+    p
+      width: 50%
+      margin-left: 25%
+      margin-right: 25%
+      max-width: 615px
+    .wp-block-image
+      max-width: 66.6666666%
+      figcaption
+        font-size: $font-size-small
+        margin-top: $margin-micro
+
+  #footer-social
+    order: initial

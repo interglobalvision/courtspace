@@ -1,0 +1,94 @@
+@media screen and (min-width: 640px)
+
+  $gutter = 28px
+
+  $margin-micro = ($gutter / 3)
+  $margin-tiny = ($gutter / 2)
+  $margin-small = ($gutter)
+  $margin-basic = ($gutter * 2)
+  $margin-mid = ($gutter * 3.5)
+  $margin-large = ($gutter * 5)
+
+  $font-size-micro = 10px
+  $font-size-tiny = 11px
+  $font-size-small = 13px
+  $font-size-basic = 15px
+  $font-size-mid = 18px
+  $font-size-large = 24px
+  $font-size-extra = 32px
+
+  space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
+
+  grid-maker(96%, $gutter, m)
+
+  font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid, $font-size-small, $font-size-tiny, $font-size-micro)
+
+  .mobile-only
+    display: none !important
+
+  .desktop-only
+    display: initial !important
+
+  $header-height = 52px
+  $footer-height = 312px
+
+  #header-spacer
+    height: $header-height
+
+  #mobile-nav
+    padding: 0
+    ul
+      flex-direction: row
+      a
+        padding: $margin-tiny
+
+  .menu-toggle
+    width: 40px
+
+  #main-content
+    min-height: calc('100vh - ' + ($header-height + $footer-height));
+
+  #home-banner
+    height: 60vh
+
+  .swiper-container
+    width: calc('100% - ' + $margin-small)
+
+  .swiper-slide
+    width: 320px
+    &:not(:first-child)
+      padding-left: $margin-tiny
+    &:not(:last-child)
+      padding-right: $margin-tiny
+
+  #gallery
+    .swiper-slide
+      img
+        max-height: 400px
+
+  .masonry-item
+    width: 50%
+    padding-left: $margin-tiny
+    padding-right: $margin-tiny
+
+  h1
+    font-size: $font-size-large
+
+  h2
+    font-size: $font-size-mid
+
+  h3, h4
+    font-size: $font-size-basic
+
+  #post-content
+    & > *
+      padding-left: $margin-tiny
+      padding-right: $margin-tiny
+    p
+      width: 75%
+      max-width: 490px
+    .wp-block-image
+      max-width: 83.3333333%
+      figcaption
+        font-size: $font-size-small
+        margin-top: $margin-micro

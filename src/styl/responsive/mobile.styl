@@ -1,0 +1,297 @@
+$gutter = 18px
+
+$margin-micro = ($gutter / 3)
+$margin-tiny = ($gutter / 2)
+$margin-small = ($gutter)
+$margin-basic = ($gutter * 2)
+$margin-mid = ($gutter * 3.5)
+$margin-large = ($gutter * 5)
+
+$font-size-micro = 10px
+$font-size-tiny = 10px
+$font-size-small = 12px
+$font-size-basic = 14px
+$font-size-mid = 17px
+$font-size-large = 21px
+$font-size-extra = 28px
+
+grid-maker(94%, $gutter, s)
+
+space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
+
+font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid, $font-size-small, $font-size-tiny, $font-size-micro)
+
+$header-height = 42px
+$footer-height = 372px
+
+body
+  overflow-x: hidden
+
+#main-content
+  min-height: calc('100vh - ' + ($header-height + $footer-height));
+  ul, ol
+    margin-bottom: 1em
+    li
+      margin-bottom: .3em
+      margin-left: 1.5em
+  ul
+    list-style-type: disc
+  ol
+    list-style-type: decimal
+
+.container
+  max-width: 1600px
+
+.border-bottom
+  border-bottom: 1px solid $color-blue
+
+.border-top
+  border-top: 1px solid $color-blue
+
+.border
+  border: 1px solid $color-blue
+
+#contact
+  text-align: center
+  padding: $margin-basic 0
+
+#header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 100
+  pointer-events: none
+  ul
+    li:last-of-type
+      font-weight: bold
+
+#header-spacer
+  width: 100%
+  height: $header-height
+
+#main-nav-holder
+  position: relative
+  background: $color-sand
+  width: 100%
+  z-index: 200
+  pointer-events: auto
+
+#mobile-nav-holder
+  position: relative
+  background: $color-white
+  width: 100%
+  z-index: 100
+  transition: transform 100ms linear
+  transform: translateY(-100%)
+  pointer-events: auto
+
+#mobile-nav
+  padding: $margin-tiny 0
+  ul
+    display: flex
+    flex-direction: column
+    a
+      display: block
+      padding: $margin-tiny
+
+.menu-toggle
+  width: 30px
+
+#menu-toggle-open
+  display: block
+#menu-toggle-close
+  display: none
+
+#header
+  &.menu-active
+    #mobile-nav-holder
+      transform: translateY(0%)
+    #menu-toggle-open
+      display: none
+    #menu-toggle-close
+      display: block
+
+#main-nav
+  display: none
+
+#main-nav-social
+  display: none
+
+input,
+button,
+[type=submit]
+  appearance: none
+  font-family: $font-sans
+  border-radius: 0 !important
+
+.menu-toggle
+  cursor: pointer
+
+#header-logo
+  width: 100px
+
+.menu-icon
+  width: 20px
+
+.current-menu-item
+  color: $color-blue
+
+#home-banner
+  background-size: cover
+  background-position: center
+  width: 100%
+  height: 50vh
+  max-height: 900px
+
+p
+  a:link,
+  a:visited,
+  a:active
+    color: $color-blue
+
+.social-link
+  margin-left: .4em
+  display: inline-block
+  img
+    height: 1.2em
+    width: auto
+  &:first-of-type
+    margin-left: 0
+
+#mailchimp-email
+  background: transparent
+  border: none
+  border-bottom: 1px solid $color-white
+  color: $color-white
+  margin-right: $margin-micro
+  &::placeholder
+    color: $color-grey-lite
+    font-family: $font-sans
+  &:focus
+    outline: none
+    &::placeholder
+      color: transparent
+
+#mailchimp-submit
+  border: none
+  background: transparent
+  color: $color-white
+  cursor: pointer
+  font-weight: bold
+
+#mailchimp-response
+  position: absolute
+
+#recent-news-list
+  padding-left: 2em
+  li
+    list-style-type: number
+
+.swiper-container
+  width: calc('100% - ' + $margin-small)
+  margin: 0 auto
+  overflow: visible
+  cursor: grab
+  &.hide-scrollbar
+    padding-bottom: 0 !important
+  &.scrolling
+    cursor: grabbing
+  a
+    cursor: pointer
+  figcaption
+    cursor: initial
+
+.swiper-slide
+  width: 200px
+  height: auto
+  margin: 0
+  &:not(:first-child)
+    padding-left: $margin-tiny
+  &:not(:last-child)
+    padding-right: $margin-tiny
+
+#gallery
+  .swiper-slide
+    width: auto
+    img
+      width: auto
+      max-height: 200px
+
+.swiper-scrollbar
+  height: 1px !important
+  background-color: $color-grey-dark
+  pointer-events: none
+
+.swiper-container-horizontal > .swiper-scrollbar
+  bottom: auto
+
+.swiper-scrollbar-drag
+  height: 10px
+  margin-top: -4.5px
+  border-radius: 0
+  background-color: $color-grey-dark
+  cursor: default
+  pointer-events: auto
+
+.masonry-item
+  float: left
+  width: 100%
+  padding-left: $margin-tiny
+  padding-right: $margin-tiny
+
+h1
+  font-size: $font-size-large
+
+h2
+  font-size: $font-size-mid
+
+h3, h4
+  font-size: $font-size-basic
+
+h1, h2, h3, h4
+  margin-bottom: .3em
+
+h1, h2, h3, h4
+  font-weight: bold
+
+.content-section:not(:first-of-type)
+  margin-top: $margin-small
+
+#post-content
+  & > *
+    padding-left: $margin-tiny
+    padding-right: $margin-tiny
+  p
+    max-width: 460px
+  .wp-block-image
+    max-width: 511px
+    text-align: center
+    margin-bottom: 1.5em
+    img
+      display: block
+    figcaption
+      color: $color-black
+      font-size: $font-size-small
+      margin-top: $margin-micro
+
+#footer
+  background-color: $color-blue
+  color: $color-white
+  p
+    margin-bottom: 0
+
+#footer-logo
+  width: 100px
+
+#footer-logo-holder
+  order: -2
+
+#footer-social
+  order: -1
+  .social-link
+    margin-right: 1em
+    &:last-of-type
+      margin-right: 0
+    img
+      height: 2em

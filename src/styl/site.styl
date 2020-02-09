@@ -1,0 +1,125 @@
+@import '~kouto-swiss/index.styl'
+@import '~globie-styl-library/helpers'
+@import '~swiper/css/swiper.css'
+
+// ******************************************************
+
+// RESETS
+
+meyer-reset()
+box-sizing-reset()
+normalize()
+
+
+// ******************************************************
+
+// GRID
+
+@import '~globie-styl-library/grid'
+
+// ******************************************************
+
+// FONTS
+@import 'fonts/fonts'
+
+$font-sans = 'AktivGrotesk', font-stack('Helvetica')
+$font-serif = 'Caponi Display', font-stack('Georgia')
+
+// ******************************************************
+
+
+// TYPOGRAPHY
+
+@import '~globie-styl-library/type'
+
+$font-size-larger = 1.3rem
+
+$font-leading-basic = 1.35
+$font-leading-tighter = 1.15
+$font-leading-larger = 1.45
+
+$font-tracking-basic = .001em
+$font-tracking-wider = .05em
+
+html
+  font-family: $font-sans
+  letter-spacing: $font-tracking-basic
+
+body
+  line-height: $font-leading-basic
+
+.font-sans
+  font-family: $font-sans
+
+.font-serif
+  font-family: $font-serif
+
+.font-larger
+  font-size: $font-size-larger
+
+.line-tighter
+  line-height: $font-leading-tighter
+
+.line-larger
+  line-height: $font-leading-larger
+
+.font-size-zero
+  font-size: 0
+
+// ******************************************************
+
+// VARIABLES
+
+$color-black = rgb(28, 28, 28)
+$color-white = rgb(255, 255, 255)
+$color-grey-lite = rgb(240, 240, 240)
+$color-grey-dark = rgb(74, 74, 74)
+$color-green = rgb(127, 143, 143)
+$color-green-lite = rgb(135, 185, 185)
+$color-green-dark = rgb(99, 116, 117)
+$color-blue = rgb(69, 157, 208)
+$color-sand = rgb(240, 238, 234)
+
+// ******************************************************
+
+// BASIC
+
+html
+  color: $color-black
+  background-color: $color-sand
+
+img
+  height: auto
+  max-width: 100%
+
+.font-grey-dark
+  color: $color-grey-dark
+
+.font-blue
+  color: $color-blue
+
+a, a:active, a:visited
+  &.font-blue
+    color: $color-blue
+
+.mobile-only
+  display: initial !important
+
+.desktop-only
+  display: none !important
+
+// ******************************************************
+
+// MEDIA QUERIES
+
+@import 'responsive/mobile'
+
+@import 'responsive/tablet-portrait'
+
+@import 'responsive/tablet-landscape'
+
+@import 'responsive/laptop'
+
+@import 'responsive/desktop'
+
+@import 'responsive/hd'
